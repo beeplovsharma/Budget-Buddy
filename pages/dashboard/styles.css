@@ -1,0 +1,356 @@
+body{
+    background: white ;
+    color:black;
+}
+.card{
+    width: 400px; height: 240px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 32px;
+
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    
+    background: linear-gradient(127.9deg, rgb(0, 0, 0) 15%, rgb(0, 0, 0) 80%);
+    background-clip: padding-box;
+  
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    transform: rotate3d(1, 1, -1, 45deg);
+    transition: transform 300ms cubic-bezier(0.7, 0.2, 0.3, 1.3);
+  
+    user-select: none;
+    cursor: grab;
+    color: white;
+}
+    .card:hover{
+        transform: rotate(0deg) scale(1.2);
+    }
+
+    .card>div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        opacity: .35;
+    }
+        .card>h1{
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .card>h2{
+            font-size: 24px;
+            font-weight: 400;
+        }
+input{
+    background-color: transparent;
+    font-size: 1rem;
+    padding: .4em;
+    color: white;
+    border-radius: .3em;
+    margin-bottom: .7em;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+label{
+    margin-bottom: .5em;
+}
+select{
+    background-color: transparent;
+    font-size: 1rem;
+    padding: 1rem;
+    color: black;
+    border-radius: .3em;
+    margin-bottom: .7em;
+}
+option{
+    background-color: white;
+    font-size: 1rem;
+    color: black;
+}
+/* add expense form */
+.addExpense{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgba(206, 206, 206, 0);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    width: 50%;
+    min-width: 300px;
+    margin: 0 auto;
+}
+.addExpense>h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: var(--accent-color);
+    border-radius: .2em;
+    padding: 1rem;
+}
+.addExpense>div>label{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.addExpense>div>input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: black;
+}
+.graph{
+    width:50%;
+    height: min-content;
+    position: relative;
+}
+.value-box-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+    padding: 1rem;
+    gap: 1rem;
+}
+.value-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.096);
+    border-radius: 1rem;
+    color: black;
+    padding: 1rem;
+}
+.value-box>h3{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.value-box>div>span{
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+.value-box:nth-child(1)>h3{
+    color: rgb(255, 106, 106);
+}
+.value-box:nth-child(2)>h3{
+    color: rgb(71, 255, 126);
+}
+.value-box:nth-child(3)>h3{
+    color: rgb(106, 109, 255);
+}
+.value-box:nth-child(4)>h3{
+    color: rgb(255, 106, 168);
+}
+.expense-list{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.history-item{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgb(55, 55, 65);
+}
+.history-item:hover{
+    transform: scale(1.05);
+}
+.expense-item{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.expense-item :nth-child(1){
+    font-size: 1rem;
+    margin-bottom: .2em;
+}
+.expense{
+    color: rgb(255, 106, 106);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.saving{
+    color: rgb(106, 255, 106);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.investment{
+    color: rgb(106, 106, 255);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.history-wrapper{
+    width:50%;
+    padding: 1rem;
+}
+.history-wrapper>h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background: var(--accent-color);
+    padding: 1rem;
+}
+.history-btn-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    gap: 1rem;
+}
+.history-section{
+    margin-top: 2rem;
+    height: fit-content;
+}
+.edit-btn{
+    background-color: rgb(84, 84, 255);
+    border: 1px solid white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: large;
+    padding: .5em;
+    border-radius: .3em;
+    
+}
+.delete-btn{
+    background-color: rgb(255, 79, 79);
+    border: 1px solid white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: large;
+    padding: .5em;
+    border-radius: .3em;
+    
+}
+.delete-btn:hover{
+    background-color: rgb(255, 106, 106);
+}
+.edit-btn:hover{
+    background-color: rgb(106, 106, 255);
+}
+.edit-png{
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    margin-left: .2em;
+}
+.delete-png{
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    margin-left: .2em;
+}
+.graph-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.graph-center  :nth-child(1){
+    font-size: large;
+}
+.graph-center :nth-child(2){
+    font-size: 3rem;
+    color: rgb(39, 255, 39);
+}
+.dollar{
+    font-size: 3rem !important;
+    color: rgb(39, 255, 39);
+}
+.top-section{
+    display: flex;
+    flex-direction: row;
+}
+@media screen and (max-width: 768px){
+   .top-section{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   };
+    
+}
+@media screen and (max-width: 768px){
+   .value-box-wrapper{
+    width: 100%;
+   };
+   .addExpense{
+    width: 100%;
+   };
+}
+@media screen and (max-width: 768px){
+   .addExpense{
+    width: 100%;
+   };
+}
+@media screen and (max-width: 768px){
+    .history-section{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 768px){
+    .history-wrapper{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+    .graph{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 768px){
+    .history-item{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    .history-btn-container{
+        justify-content: space-between;
+        width: 100%;
+    }
+}

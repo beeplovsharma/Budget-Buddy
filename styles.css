@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+:root{
+    --primary-color: #2f4550;
+    --secondary-color: #385360;
+    --accent-color: #b8dbd9;
+}
+/* utility-classes */
+.font-comic{
+    font-family: 'Caprasimo', cursive;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-row{
+    flex-direction: row;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.w-full{
+    width: 100%;
+}
+/* buttons */
+.primary-button{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.primary-button:hover{
+    background-color: var(--secondary-color);
+}
+.secondary-button{
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.secondary-button:hover{
+    background-color: var(--secondary-color);
+}
+
+/* navbar */
+nav{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.branding{
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+nav>ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+.nav-link:hover{
+    color: var(--primary-color);
+}
+
+/* header */
+
+.header-heading{
+    font-size: 7rem;
+    width: 50%;
+    font-weight: 600;
+    color: black;
+}
+.main-header-container{
+    justify-content: space-between;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+}
+.main-header-container>img{
+    width: 50%;
+    height: 100%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.tag-line{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 2rem 0;
+}
+.header-button-container{
+    display: flex;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 1024px){
+   body{
+         font-size: 10px;
+   }
+    
+}
+@media screen and (max-width: 768px){
+    nav>ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .header-heading{
+        font-size: 2rem;
+        width: 100%;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+    }
+    .tag-line{
+        font-size: 1rem;
+    }
+    .main-header-container{
+        height: 50%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin-top: 5rem;
+    }
+    
+
+}
